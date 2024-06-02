@@ -1,4 +1,4 @@
-<mat-toolbar class="example-toolbar">
+<mat-toolbar color="white" class="example-toolbar">
   <button mat-icon-button (click)="isExpanded = !isExpanded">
     <mat-icon>menu</mat-icon>
   </button>
@@ -15,9 +15,7 @@
   >
     <mat-nav-list>
       <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <span class="full-width" *ngIf="isExpanded || isShowing"
-          >Parent Menu</span
-        >
+        <span *ngIf="isExpanded || isShowing">Parent Menu</span>
         <mat-icon mat-list-icon>home</mat-icon>
         <mat-icon
           class="menu-button"
@@ -37,9 +35,7 @@
           (click)="showSubSubMenu = !showSubSubMenu"
           class="parent"
         >
-          <span class="full-width" *ngIf="isExpanded || isShowing"
-            >Nested Menu</span
-          >
+          <span *ngIf="isExpanded || isShowing">Nested Menu</span>
           <mat-icon
             class="menu-button"
             [ngClass]="{ rotated: showSubSubMenu }"
